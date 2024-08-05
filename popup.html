@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy & Security Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="chart\node_modules\chart.js\dist\chart.umd.js"></script> <!-- 确保仅引用一次，并在其他脚本之前加载 -->
+</head>
+<body>
+  <h2>Website Security Rating</h2>
+  
+  <div class="tab">
+    <button class="tablinks active" id="displayTab">Display</button>
+    <button class="tablinks" id="detailTab">Detail</button>
+  </div>
+
+  <div id="Display" class="tabcontent" style="display: block;">
+    <div id="chart-container">
+      <canvas id="securityChart"></canvas>
+    </div>
+  </div>
+
+  <div id="Detail" class="tabcontent">
+    <div id="detailResult">
+      <h3>Security Details</h3>
+      <p>Here are the detailed security analysis results...</p>
+    </div>
+  </div>
+
+  <button id="analyzeButton" class="analyze-button">Analyze Website</button>
+  <script src="popup.js"></script> <!-- 确保这个脚本在 Chart.js 之后加载 -->
+</body>
+</html>
